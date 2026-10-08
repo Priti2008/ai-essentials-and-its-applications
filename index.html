@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Touch Grass - Outdoor Quest Generator 🌱</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+        button {
+            background-color: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #1b4332;
+        }
+        #quest-box {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #52b788;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🌱 Touch Grass Quest Generator</h1>
+        <p>Step away from the screen and get outside! Click below to generate your quick nature micro-quest.</p>
+        
+        <button onclick="generateQuest()">Get Outdoor Quest</button>
+        
+        <div id="quest-box">Your quest will appear here...</div>
+    </div>
+
+    <script>
+        const quests = [
+            "Go outside and find 3 unique leaves in your nearest park.",
+            "Take a 15-minute walk without checking your phone once.",
+            "Find a plant or tree you don't recognize and take its picture.",
+            "Sit under a tree for 10 minutes and listen to the sounds of nature.",
+            "Walk 1 kilometer around your neighborhood keeping your eyes up at the sky."
+        ];
+
+        function generateQuest() {
+            const randomIndex = Math.floor(Math.random() * quests.length);
+            document.getElementById("quest-box").innerText = quests[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
